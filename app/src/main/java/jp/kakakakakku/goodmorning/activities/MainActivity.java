@@ -1,4 +1,4 @@
-package jp.kakakakakku.goodmorning;
+package jp.kakakakakku.goodmorning.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import jp.kakakakakku.goodmorning.R;
 
 public class MainActivity extends Activity {
 
