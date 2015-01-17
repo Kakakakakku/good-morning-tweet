@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import jp.kakakakakku.goodmorning.R;
-
 
 public class MainActivity extends Activity {
 
@@ -35,9 +34,9 @@ public class MainActivity extends Activity {
 
     private String getMessage() {
         // 現在時刻を取得して、Tweet するメッセージを生成する
-        DateTime dt = new DateTime();
-        String date = dt.toString(DateTimeFormat.mediumDate());
-        String time = dt.toString(DateTimeFormat.shortTime());
+        Calendar calendar = Calendar.getInstance();
+        String date = new SimpleDateFormat("yyyy/MM/dd").format( calendar.getTime() );
+        String time = new SimpleDateFormat("hh:mm").format( calendar.getTime() );
         return Uri.encode(date + " の起床時刻は " + time + " です" + " #おはようTweet");
     }
 
