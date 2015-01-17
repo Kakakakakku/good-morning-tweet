@@ -3,31 +3,73 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_header" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:baselineAligned="false"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center|center_horizontal">
 
-        <Button
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="起きた時間を記録する"
-            android:id="@+id/b_wakeup" />
+            android:text="@string/main_header"
+            android:textSize="48dp"
+            android:textStyle="bold"
+            android:textColor="#ff00acee" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="履歴を見る"
-            android:id="@+id/b_history" />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="朝起きたら\nフォロワーに伝えよう\n↓↓↓"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ib_tweet"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/twitter"
+            android:background="#00000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#おはようTweet"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <net.nend.android.NendAdView
+            android:id="@+id/nend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            NendApiKey="1aa0f6c5998f900ba6db43b4de3ea4f2909eae33"
+            NendSpotId="297467"
+            android:gravity="center" />
+    </LinearLayout>
 
 </LinearLayout>

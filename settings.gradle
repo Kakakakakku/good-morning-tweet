@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':nendSDK-2.3.2'
