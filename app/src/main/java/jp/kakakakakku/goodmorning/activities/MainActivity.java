@@ -15,6 +15,8 @@ import jp.kakakakakku.goodmorning.R;
 
 public class MainActivity extends Activity {
 
+    public static final String GOOGLE_STORE_URL = "http://goo.gl/oui1YV";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class MainActivity extends Activity {
         Calendar calendar = Calendar.getInstance();
         String date = new SimpleDateFormat("yyyy/MM/dd").format( calendar.getTime() );
         String time = new SimpleDateFormat("hh:mm").format( calendar.getTime() );
-        return Uri.encode(date + " の起床時刻は " + time + " です" + " #おはようTweet");
+        return Uri.encode(date + " の起床時刻は " + time + " です" + " #おはようTweet / " + GOOGLE_STORE_URL);
     }
 
     private void showToast(String message) {
